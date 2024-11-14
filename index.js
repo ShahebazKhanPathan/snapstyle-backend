@@ -31,6 +31,10 @@ app.use('/api/product', productRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/cart', cartRouter);
 
+// Enable error handler
+const errorHandler = require('./middleware/error');
+app.use(errorHandler);
+
 // Create a server
 app.listen(process.env.PORT, () => {
     console.log(`Node server listening on port: ${process.env.PORT}`);
