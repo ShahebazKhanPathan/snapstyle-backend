@@ -11,7 +11,7 @@ const getAllProducts = async (req, res, next) => {
         const products = await Product
             .find()
             .select("title category price _id photo.name");
-        res.send(products);
+        res.json(products);
     }
     catch (err) {
         next(err);
