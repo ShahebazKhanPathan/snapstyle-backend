@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // Function to create database connection
 const db = () => {
     try {
-        mongoose.connect(process.env.MONGO_URI)
+        mongoose.connect(process.env.MONGO_URI.toString())
             .then(() => console.log('MongoDB connection established'))
             .catch((err) => console.log('Error: ', err));
     }
