@@ -3,13 +3,5 @@
   "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
   "rewrites": [
         { "source": "/api/(.*)", "destination": "/api/index.js" }
-  ],
-  "routes": [
-    {
-      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      }
-    }
   ]
 }
